@@ -1,3 +1,3 @@
 # berkeleyarabic
 
-* [Flashcards](https://berkeleyarabic.github.io/flashcards/)
+# Looking for [flashcards](https://berkeleyarabic.github.io/flashcards/)?
