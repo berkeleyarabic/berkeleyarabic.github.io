@@ -11,21 +11,13 @@ fi
 
 >&2 echo Writing to $OUT
 
-set -x
-    # get rid of <p> around main <div>
-    # remove closing tags
 multimarkdown $FN -o - | \
+    # get rid of <p> around main <div>
     perl -pe '/<div id="page-wrap">/ && s/<\/?p>//g' | \
     grep -v 'my-source-command' | \
+    # remove closing tags
     head -n -3 \
     > $OUT
-
-# cat >> $OUT <<EOF
-# <p><em>Last updated $(date +'%-d %B %y')</em></p>
-# </div>
-# </body>
-# </html>
-# EOF
 
 cat >> $OUT <<EOF
 </div>
